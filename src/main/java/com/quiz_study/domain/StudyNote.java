@@ -33,6 +33,8 @@ public class StudyNote {
 
     private LocalDateTime createdAt;
 
+    private LocalDateTime updatedAt;
+
     @OneToMany(mappedBy = "studyNote", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Quiz> quizzes = new ArrayList<>();
 }
